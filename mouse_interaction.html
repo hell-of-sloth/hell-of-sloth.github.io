@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      #div1 {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        top: 77px;
-        left: 270px;
-      }
-    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>나태지옥 심폐소생술 온라인 교육</title>
+    <script
+      src="https://kit.fontawesome.com/b01c9410e5.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./mouse_inter_style.css" />
     <script>
       function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
@@ -37,19 +32,78 @@
     </script>
   </head>
   <body>
-    <h1>심폐소생술 위치 실습</h1>
-    <h3>손을 드래그하여 적절한 위치에 놓아주세요!</h3>
-    <div style="position: relative">
-      <img src="annie.jpg" alt="annie" />
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="nav">
+      <div class="logo">
+        <img src="CPR_image.png" alt="" />
+      </div>
+      <div class="nav_but">
+        <div class="container">
+          <div class="steps">
+            <span class="circle active">1</span>
+            <span class="circle active">2</span>
+            <span class="circle active">3</span>
+            <span class="circle active">4</span>
+            <span class="circle">5</span>
+            <div class="progress-bar">
+              <span class="indicator"></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <img
-      id="drag1"
-      src="cpr_hand.png"
-      draggable="true"
-      ondragstart="drag(event)"
-      width="100"
-      height="100"
-    />
+
+
+    <section class="header">
+      <div class="title">
+        <h1>심폐소생술 위치 실습</h1>
+        <h3>손을 드래그하여 적절한 위치에 놓아주세요!</h3>
+        <div style="position: relative">
+          <img class="image" src="annie.jpg" alt="annie" />
+          <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </div>
+        <img
+          id="drag1"
+          src="cpr_hand.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          width="100"
+          height="100"
+        />
+      </div>
+    </section>
+
+
+    <footer>
+      <div class="container">
+        <div class="left">
+          <h1>SKKU x Hell of Sloth</h1>
+          <p>https://github.com/hell-of-sloth</p>
+          <div class="sns">
+            <i class="fab fa-github"></i>
+          </div>
+        </div>
+        <div class="right">
+          <div class="list">
+            <h2>CONTECT</h2>
+            <ul>
+              <li>김상협: sanghyup2000@g.skku.edu</li>
+              <li>박병준: superjun@g.skku.edu</li>
+              <li>송준영: jnnkk@g.skku.edu</li>
+              <li>이균서: rbstj0311@g.skku.edu</li>
+            </ul>
+          </div>
+          <div class="list">
+            <h2>ABOUT</h2>
+            <ul>
+              <li>TEAM : HEll OF SLOTH</li>
+              <li>PROJECT : CPR ONLINE LECTURE</li>
+              <li>UNIVERSITY : SKKU</li>
+              <li>THANK YOU</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>

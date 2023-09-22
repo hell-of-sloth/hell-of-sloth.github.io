@@ -22,7 +22,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
 }
 .nav .logo img{
@@ -31,6 +31,20 @@ body {
     border-radius: 15%;
     background-color: white;
     padding: 0px;
+    transition: ease-in-out 0.3s;
+}
+.nav .nav_title {
+    font-family: 'yg-jalnan';
+    font-size: 50px;
+    color: #373333;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+.nav .logo img:hover{
+    transform: scale(1.1);
+    background-color: rgb(233, 237, 194);
+    border: 5px solid rgb(233, 237, 194);
 }
 .nav .nav_but {
     padding-left: 20px;
@@ -204,7 +218,8 @@ footer .container .right .list ul {
 }
 footer .container .right .list ul li {
     padding: 5px 5px;
+    transition: .5s ease;
 }
 footer .container .right .list ul li:hover {
-    background-color: #222;
+    background-color: #2f2f2f;
 }

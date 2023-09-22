@@ -24,6 +24,7 @@
                 background-color: white;
                 padding: 0px;
             }
+
             .header {
                 background: url(./background_image.jpg);
                 background-position: center;
@@ -56,6 +57,31 @@
                 font: size 20px;
                 transition: .5s ease;
             }
+
+            .intro {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 1200px;
+                margin: auto;
+            }
+            .intro .card {
+                flex: 1;
+                text-align: center;
+                margin: 150px 40px;
+            }
+            .intro .card i {
+                font-size: 70px;
+                color: #444;
+                margin-bottom: 30px;
+            }
+            .intro .card h1 {
+                letter-spacing: 0.2em;
+            }
+            .intro .card p {
+                font-size: 10px;
+            }
+
             footer {
                 color: white;
                 background: black;
@@ -131,13 +157,19 @@
 
         <section class="intro">
             <div class="card">
-
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h1>편한 학습</h1>
+                <p>온라인으로 간편하게 심폐소생술을 학습하세요!</p>
             </div>
             <div class="card">
-                
+                <i class="fa-solid fa-video"></i>
+                <h1>모션 인식</h1>
+                <p>웹캠을 이용한 모션인식으로 정확한 자세로 학습해보세요!</p>
             </div>
             <div class="card">
-                
+                <i class="fa-solid fa-microphone-lines"></i>
+                <h1>음성 인식</h1>
+                <p>음성인식으로 응급상황시 어떻게 해야하는지 실천해보세요!</p>
             </div>
         </section>
 

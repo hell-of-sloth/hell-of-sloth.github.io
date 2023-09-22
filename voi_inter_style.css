@@ -17,6 +17,10 @@
 body {
   background-color: #fbeec6;
 }
+
+img {
+  border-radius: 30px;
+}
 .nav {
   background-color: #fbeec6;
   height: 150px;

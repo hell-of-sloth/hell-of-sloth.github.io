@@ -153,6 +153,16 @@ body {
     flex: 1;
     text-align: center;
     margin: 150px 40px;
+    border-radius: 25px;
+    padding: 50px 20px;
+    background-color: white;
+    transition: .5s ease;
+}
+.intro .card:hover {
+    transform: scale(1.1);
+    background-color: rgb(233, 237, 194);
+    border: 5px solid rgb(233, 237, 194);
+    
 }
 .intro .card i {
     font-size: 70px;
@@ -164,8 +174,9 @@ body {
     font-family: "yg-jalnan";
 }
 .intro .card p {
-    font-size: 15px;
+    font-size: 16px;
     font-family: 'SUITE-Regular';
+    font-weight: 600;
 }
 
 footer {

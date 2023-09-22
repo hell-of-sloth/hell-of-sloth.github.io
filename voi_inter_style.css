@@ -82,7 +82,7 @@ body {
 .progress-bar .indicator {
   position: absolute;
   height: 100%;
-  width: 70%;
+  width: 50%;
   background: #4070f4;
   transition: all 300ms ease;
   z-index: 1;
@@ -105,7 +105,8 @@ body {
     font-size: 50px;
     color: #373333;
     letter-spacing: 0.2em;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .header .title p {
     margin-top: 0;

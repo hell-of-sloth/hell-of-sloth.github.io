@@ -105,7 +105,7 @@ body {
 .progress-bar .indicator {
   position: absolute;
   height: 100%;
-  width: 0%;
+  width: 75%;
   background: #4070f4;
   transition: all 300ms ease;
   z-index: 1;
@@ -120,22 +120,25 @@ body {
   align-items: center;
   justify-content: center;
 }
-.header .title {
+.header {
   text-align: center;
 }
-.header .title h1 {
+.header h1 {
   font-family: "yg-jalnan";
   font-size: 50px;
   color: #373333;
   letter-spacing: 0.2em;
   margin-bottom: 30px;
 }
-.header .title p {
+.header p {
+  font-family: "SUITE-Regular";
+  font-size: 30px;
+  font-weight: 600  ;
   margin-top: 0;
   margin-bottom: 30px;
   color: #444;
 }
-.header .title button {
+button {
   font-family: "yg-jalnan";
   background-color: white;
   color: black;
@@ -144,8 +147,9 @@ body {
   padding: 20px 60px;
   font-size: 25px;
   transition: 0.5s ease;
+  cursor: pointer;
 }
-.header .title button:hover {
+button:hover {
   background-color: rgb(233, 237, 194);
   font-size: 30px;
 }

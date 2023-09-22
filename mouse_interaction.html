@@ -29,14 +29,16 @@
         ev.preventDefault();
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
-        sleep(300).then(() => {
-          alert("You have successfully completed the task!");
+        sleep(400).then(() => {
+          alert("잘하셨습니다.");
           location.href = "keyboard_interaction.html";
         });
       }
     </script>
   </head>
   <body>
+    <h1>심폐소생술 위치 실습</h1>
+    <h3>손을 드래그하여 적절한 위치에 놓아주세요!</h3>
     <div style="position: relative">
       <img src="annie.jpg" alt="annie" />
       <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>

@@ -108,6 +108,25 @@ body {
     max-width: 550px;
 }
 
+.next_button {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.next_button button {
+    font-family: 'yg-jalnan';
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 20px 60px;
+    font-size: 25px;
+    transition: .5s ease;
+}
+.next_button button:hover{
+    background-color: rgb(233, 237, 194);
+    font-size: 30px;
+}
+
 footer {
     color: white;
     background: black;

@@ -37,6 +37,8 @@
       .toString()
       .padStart(2, "0")}`;
     timerDisplay.textContent = formattedTime;
+    typingSpeed = Math.round((keyCount / elapsedTime) * 60); // 타수 (타/분)
+    speedTest.textContent = `${keyCount} 타 (${typingSpeed} 타/분)`;
     if (elapsedTime >= 10) {
       // 시간이 지나면 테스트 종료
       endTest(typingSpeed);

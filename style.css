@@ -66,6 +66,10 @@ body {
     font-size: 25px;
     transition: .5s ease;
 }
+.header .title button:hover{
+    background-color: rgb(233, 237, 194);
+    font-size: 30px;
+}
 
 .intro {
     display: flex;

@@ -38,6 +38,14 @@ body {
     background-size: cover;
     height: 700px;
 }
+.guide_box h1 {
+    text-align: center;
+    font-family: 'yg-jalnan';
+    font-size: 50px;
+    color: #373333;
+    letter-spacing: 0.2em;
+    margin-bottom: 30px;
+}
 
 .guide_box .guide {
     height: 300px;
@@ -47,48 +55,57 @@ body {
     flex-wrap: wrap;
     align-content: center;
 }
-.guide .card {
+.guide_box .guide .card {
     flex: 1;
     text-align: center;
     margin: 150px 40px;
-    border: 2px solid black;
-    border-radius: 10px;
+    border: 5px solid black;
+    border-radius: 40px;
+    padding: 10px;
     margin: 20px;
+    max-width: 300px;
 }
-.guide .card h2 {
-    letter-spacing: 0.2em;
+.guide_box .guide .card h2 {
+    letter-spacing: 0.1em;
     font-family: "yg-jalnan";
 }
 .guide .card p {
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'SUITE-Regular';
+    font-weight: 600;
     align-items: center;
 }
 
-.intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
+.warning {
+    background: url(./caution.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    max-width: 700px;
     margin: auto;
-}
-.intro .card {
-    flex: 1;
-    text-align: center;
-    margin: 150px 40px;
-}
-.intro .card i {
-    font-size: 70px;
-    color: #444;
+    border-radius: 30px;
     margin-bottom: 30px;
 }
-.intro .card h1 {
-    letter-spacing: 0.2em;
+.warning h2 {
     font-family: "yg-jalnan";
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
 }
-.intro .card p {
-    font-size: 15px;
-    font-family: 'SUITE-Regular';
+.warning p {
+    font-family: "yg-jalnan";
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 5px;
+    max-width: 550px;
 }
 
 footer {

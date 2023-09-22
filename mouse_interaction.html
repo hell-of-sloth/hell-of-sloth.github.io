@@ -1,40 +1,55 @@
 <!DOCTYPE html>
-<head>
+<html>
+  <head>
     <style>
-        #div1 {
-          width: 100px;
-          height: 100px;
-          position: absolute;
-          top: 77px;
-          left: 270px;
-        }
+      #div1 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 77px;
+        left: 270px;
+      }
     </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        function allowDrop(ev) {
-          ev.preventDefault();
-        }
-        
-        function drag(ev) {
-          ev.dataTransfer.setData("text", ev.target.id);
-        }
-        
-        function drop(ev) {
-          ev.preventDefault();
-          var data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
-          alert('You have successfully completed the task!')
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        sleep(400).then(() => {
+          alert("잘하셨습니다.");
           location.href = "keyboard_interaction.html";
-        }
-        </script>
-</head>
-<body>
-    <div style="position: relative;">
-        <img src="annie.jpg" alt="annie">
-        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>심폐소생술 위치 실습</h1>
+    <h3>손을 드래그하여 적절한 위치에 놓아주세요!</h3>
+    <div style="position: relative">
+      <img src="annie.jpg" alt="annie" />
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     </div>
-    <img id="drag1" src="cpr_hand.png" draggable="true" ondragstart="drag(event)" width="100" height="100">
-</body>
+    <img
+      id="drag1"
+      src="cpr_hand.png"
+      draggable="true"
+      ondragstart="drag(event)"
+      width="100"
+      height="100"
+    />
+  </body>
 </html>

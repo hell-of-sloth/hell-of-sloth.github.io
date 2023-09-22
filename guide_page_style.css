@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #fbeec6;
+}
+.nav {
+    background-color: #fbeec6;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+}
+.nav .logo img{
+    width: 100px;
+    border: 5px solid black;
+    border-radius: 15%;
+    background-color: white;
+    padding: 0px;
+}
+
+.guide_box {
+    background: url(./background_image.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+}
+
+.guide_box .guide {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.guide .card {
+    flex: 1;
+    text-align: center;
+    margin: 150px 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 20px;
+}
+.guide .card h2 {
+    letter-spacing: 0.2em;
+    font-family: "yg-jalnan";
+}
+.guide .card p {
+    font-size: 15px;
+    font-family: 'SUITE-Regular';
+    align-items: center;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+.intro .card {
+    flex: 1;
+    text-align: center;
+    margin: 150px 40px;
+}
+.intro .card i {
+    font-size: 70px;
+    color: #444;
+    margin-bottom: 30px;
+}
+.intro .card h1 {
+    letter-spacing: 0.2em;
+    font-family: "yg-jalnan";
+}
+.intro .card p {
+    font-size: 15px;
+    font-family: 'SUITE-Regular';
+}
+
+footer {
+    color: white;
+    background: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+footer .container .left {
+    flex: 1;
+}
+footer .container .left h1 {
+    margin-bottom: 0;
+    font-size: 25px;
+}
+footer .container .left p {
+    margin: 0;
+    font-size: 10px;
+}
+footer .container .right {
+    flex: 3;
+    padding-left: 50px;
+}
+footer .container .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container .right .list {
+    flex: 1;
+    margin-left: 20px;
+}
+footer .container .right .list h2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+footer .container .right .list ul {
+    list-style: none;
+    padding: 0;
+}
+footer .container .right .list ul li {
+    padding: 5px 5px;
+}
+footer .container .right .list ul li:hover {
+    background-color: #222;
+}

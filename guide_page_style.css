@@ -11,6 +11,17 @@
     font-weight: 400;
     font-style: normal;
 }
+@keyframes blink {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: red; /* 테두리 색상을 원하는 색상으로 변경하세요 */
+    }
+    100% {
+      border-color: transparent;
+    }
+  }
 
 body {
     background-color: #fbeec6;
@@ -134,6 +145,12 @@ body {
     padding: 10px;
     margin: 20px;
     max-width: 300px;
+    transition: ease-in-out 0.3s;
+}
+.guide_box .guide .card:hover {
+    background-color: rgb(233, 237, 194);
+    border: 5px solid rgb(233, 237, 194);
+    transform: scale(1.1);
 }
 .guide_box .guide .card h2 {
     letter-spacing: 0.1em;
@@ -154,7 +171,10 @@ body {
     max-width: 700px;
     margin: auto;
     border-radius: 30px;
+    margin-top: 30px;
     margin-bottom: 30px;
+    border: 10px solid transparent; /* 테두리 초기 색상을 투명으로 설정 */
+    animation: blink 1s infinite; /* 1초 간격으로 애니메이션 반복 */
 }
 .warning h2 {
     font-family: "yg-jalnan";

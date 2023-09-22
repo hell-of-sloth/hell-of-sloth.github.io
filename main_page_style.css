@@ -210,7 +210,8 @@ footer .container .right .list ul {
 }
 footer .container .right .list ul li {
     padding: 5px 5px;
+    transition: .5s ease;
 }
 footer .container .right .list ul li:hover {
-    background-color: #222;
+    background-color: #2f2f2f;
 }

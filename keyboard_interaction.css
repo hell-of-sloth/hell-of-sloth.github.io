@@ -236,9 +236,10 @@ footer .container .right .list ul {
 }
 footer .container .right .list ul li {
   padding: 5px 5px;
+  transition: .5s ease;
 }
 footer .container .right .list ul li:hover {
-  background-color: #222;
+  background-color: #2f2f2f;
 }
 
 #start-button {
@@ -249,8 +250,8 @@ footer .container .right .list ul li:hover {
   border-radius: 30px;
   padding: 20px 60px;
   font-size: 25px;
-  transition: 0.5s ease;
   margin-bottom: 20px;
+  transition: 1s ease;
 }
 #start-button:hover {
   background-color: rgb(233, 237, 194);

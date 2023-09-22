@@ -40,12 +40,18 @@ body {
   max-width: 1000px;
   margin: auto;
 }
-.nav .logo img {
+.nav .logo img{
   width: 100px;
   border: 5px solid black;
   border-radius: 15%;
   background-color: white;
   padding: 0px;
+  transition: ease-in-out 0.3s;
+}
+.nav .logo img:hover{
+  transform: scale(1.1);
+  background-color: rgb(233, 237, 194);
+  border: 5px solid rgb(233, 237, 194);
 }
 .nav .nav_but {
   padding-left: 20px;

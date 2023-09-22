@@ -30,6 +30,12 @@ body {
     border-radius: 15%;
     background-color: white;
     padding: 0px;
+    transition: ease-in-out 0.3s;
+}
+.nav .logo img:hover{
+    transform: scale(1.1);
+    background-color: rgb(233, 237, 194);
+    border: 5px solid rgb(233, 237, 194);
 }
 .nav .nav_but {
     padding-left: 20px;

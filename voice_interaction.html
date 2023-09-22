@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>나태지옥 심폐소생술 온라인 교육</title>
+    <title>심폐소생술 온라인 교육</title>
     <script
       src="https://kit.fontawesome.com/b01c9410e5.js"
       crossorigin="anonymous"
@@ -16,9 +16,7 @@
       <div class="logo">
         <a href="index.html"><img src="CPR_image.png" alt="" /></a>
       </div>
-      <div class="nav_title">
-        CPR PRAC.
-      </div>
+      <div class="nav_title">CPR PRAC.</div>
       <div class="nav_but">
         <div class="container">
           <div class="steps">
@@ -53,7 +51,19 @@
             />
           </div>
         </div>
-        <button type="button" onclick="init()">Start</button>
+        <button type="button" id="record-start-button" onclick="init()">
+          녹음 시작
+        </button>
+        <div
+          class="record-button-wrapper unvisible"
+          style="
+            align-items: center !important;
+            justify-content: center !important;
+          "
+        >
+          <button class="record-button unvisible"></button>
+          <span class="recording-text unvisible">녹음 중...</span>
+        </div>
         <div id="label-container"></div>
       </div>
     </section>
@@ -73,7 +83,7 @@
       // https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
 
       // the link to your model provided by Teachable Machine export panel
-      const URL = "https://teachablemachine.withgoogle.com/models/ye5qd85KV/";
+      const URL = "https://teachablemachine.withgoogle.com/models/10ZjdC7lg/";
 
       async function createModel() {
         const checkpointURL = URL + "model.json"; // model topology
@@ -93,6 +103,17 @@
       }
 
       async function init() {
+        const recordStartBtn = document.getElementById("record-start-button");
+        // display none recordStartBtn
+        recordStartBtn.style.display = "none";
+        console.log(recordStartBtn.classList);
+
+        const univisibles = [...document.querySelectorAll(".unvisible")];
+        console.log(univisibles);
+        // remove unvisible class from all elements
+        univisibles.forEach((element) => {
+          element.classList.remove("unvisible");
+        });
         const recognizer = await createModel();
         const classLabels = recognizer.wordLabels(); // get class labels
         const labelContainer = document.getElementById("label-container");
@@ -129,6 +150,8 @@
                   // button을 class="title"의 자식으로 append
                   const title = document.querySelector(".title");
                   title.appendChild(button);
+                  document.querySelector(".recording-text").innerHTML =
+                    "녹음 완료";
                   // listen()를 멈춤
                   recognizer.stopListening();
                   toggle = true;

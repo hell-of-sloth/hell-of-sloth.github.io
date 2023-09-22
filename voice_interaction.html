@@ -84,9 +84,13 @@
           (result) => {
             const scores = result.scores; // probability of prediction for each class
             // render the probability scores per class
+            let toggle = false;
             for (let i = 0; i < classLabels.length; i++) {
               if (scores[i] > 0.95) {
-                if (classLabels[i] == "주황색" || classLabels[i] == "119") {
+                if (
+                  classLabels[i] == "주황색" ||
+                  (classLabels[i] == "119" && toggle == false)
+                ) {
                   // do something
                   // mouse_interaction.html로 이동
                   // body에 button을 append하고, button을 클릭하면 mouse_interaction.html로 이동
@@ -103,6 +107,7 @@
                   title.appendChild(button);
                   // listen()를 멈춤
                   recognizer.stopListening();
+                  toggle = true;
                 }
               }
               // const classPrediction =

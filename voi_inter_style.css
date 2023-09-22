@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @font-face {
     font-family: 'yg-jalnan';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
@@ -11,7 +12,6 @@
     font-weight: 400;
     font-style: normal;
 }
-
 body {
     background-color: #fbeec6;
 }
@@ -64,7 +64,7 @@ body {
   border: 4px solid #e0e0e0;
   transition: all 200ms ease;
   transition-delay: 0s;
-  z-index: 2;
+  z-index: 1;
 }
 .steps .circle.active {
   transition-delay: 100ms;
@@ -82,93 +82,40 @@ body {
 .progress-bar .indicator {
   position: absolute;
   height: 100%;
-  width: 0%;
+  width: 70%;
   background: #4070f4;
   transition: all 300ms ease;
   z-index: 1;
 }
 
-.guide_box {
+.header {
     background: url(./background_image.jpg);
     background-position: center;
     background-size: cover;
-    height: 700px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.guide_box h1 {
+.header .title {
     text-align: center;
+}
+.header .title h1 {
     font-family: 'yg-jalnan';
     font-size: 50px;
     color: #373333;
     letter-spacing: 0.2em;
     margin-bottom: 30px;
 }
-
-.guide_box .guide {
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-content: center;
-}
-.guide_box .guide .card {
-    flex: 1;
-    text-align: center;
-    margin: 150px 40px;
-    border: 5px solid black;
-    border-radius: 40px;
-    padding: 10px;
-    margin: 20px;
-    max-width: 300px;
-}
-.guide_box .guide .card h2 {
-    letter-spacing: 0.1em;
-    font-family: "yg-jalnan";
-}
-.guide .card p {
-    font-size: 20px;
-    font-family: 'SUITE-Regular';
-    font-weight: 600;
-    align-items: center;
-}
-
-.warning {
-    background: url(./caution.jpg);
-    background-position: center center;
-    background-size: cover;
-    height: 400px;
-    max-width: 700px;
-    margin: auto;
-    border-radius: 30px;
+.header .title p {
+    margin-top: 0;
     margin-bottom: 30px;
+    color: #444;
 }
-.warning h2 {
-    font-family: "yg-jalnan";
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 30px;
-    padding-top: 30px;
-    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+.header .mic {
+    text-align: bottom;
 }
-.warning p {
-    font-family: "yg-jalnan";
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin: auto;
-    margin-top: 15px;
-    border: 2px solid white;
-    border-radius: 30px;
-    padding: 5px;
-    max-width: 550px;
-}
-
-.next_button {
-    text-align: center;
-    margin-bottom: 30px;
-}
-.next_button button {
+button{
     font-family: 'yg-jalnan';
     background-color: white;
     color: black;
@@ -177,8 +124,9 @@ body {
     padding: 20px 60px;
     font-size: 25px;
     transition: .5s ease;
+    margin-bottom: 20px ;
 }
-.next_button button:hover{
+button:hover{
     background-color: rgb(233, 237, 194);
     font-size: 30px;
 }

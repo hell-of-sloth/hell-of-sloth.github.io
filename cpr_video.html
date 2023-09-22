@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>나태지옥 심폐소생술 온라인 교육</title>
+    <script
+      src="https://kit.fontawesome.com/b01c9410e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./cpr_video_style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <img src="CPR_image.png" alt="" />
+      </div>
+      <div class="nav_but">
+        <div class="container">
+          <div class="steps">
+            <span class="circle active">1</span>
+            <span class="circle active">2</span>
+            <span class="circle">3</span>
+            <span class="circle">4</span>
+            <span class="circle">5</span>
+            <div class="progress-bar">
+              <span class="indicator"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mv">
+      <div id="player"></div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="left">
+          <h1>SKKU x Hell of Sloth</h1>
+          <p>https://github.com/hell-of-sloth</p>
+          <div class="sns">
+            <i class="fab fa-github"></i>
+          </div>
+        </div>
+        <div class="right">
+          <div class="list">
+            <h2>CONTECT</h2>
+            <ul>
+              <li>김상협: sanghyup2000@g.skku.edu</li>
+              <li>박병준: superjun@g.skku.edu</li>
+              <li>송준영: jnnkk@g.skku.edu</li>
+              <li>이균서: rbstj0311@g.skku.edu</li>
+            </ul>
+          </div>
+          <div class="list">
+            <h2>ABOUT</h2>
+            <ul>
+              <li>TEAM : HEll OF SLOTH</li>
+              <li>PROJECT : CPR ONLINE LECTURE</li>
+              <li>UNIVERSITY : SKKU</li>
+              <li>THANK YOU</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <dialog id="modal-dialog">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p>동영상 이수를 완료했습니다. 다음 단계로 넘어갑니다.</p>
+        <button id="ok-btn">확인</button>
+      </div>
+    </dialog>
+  </body>
+  <script>
+    var tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName("script")[0];
+    var okBtn = document.querySelector("#ok-btn");
+    okBtn.addEventListener("click", function () {
+      location.href = "voice_interaction.html";
+    });
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    function onYouTubeIframeAPIReady(fileName) {
+      var player = new YT.Player("player", {
+        height: "300",
+        width: "500",
+        videoId: "mq6l2tea6mY",
+        rel: 0, //0으로 해놓아야 재생 후 관련 영상이 안뜸
+        events: {
+          onStateChange: onPlayerStateChange,
+        },
+      });
+    }
+    function onPlayerStateChange(event) {
+      if (event.data === 0) {
+        document.querySelector("#modal-dialog").showModal();
+
+        // location.href = "voice_interaction.html";
+      }
+    }
+  </script>
+</html>

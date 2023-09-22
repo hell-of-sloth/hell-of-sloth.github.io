@@ -105,7 +105,8 @@ body {
     font-size: 50px;
     color: #373333;
     letter-spacing: 0.2em;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .header .title p {
     margin-top: 0;
@@ -125,6 +126,8 @@ button{
     font-size: 25px;
     transition: .5s ease;
     margin-bottom: 20px ;
+    position: absolute;
+    bottom: 0;
 }
 button:hover{
     background-color: rgb(233, 237, 194);

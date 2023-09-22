@@ -4,31 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>키보드 인터랙션</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-      }
-      #instructions {
-        font-size: 18px;
-        margin-bottom: 20px;
-      }
-      #speed-test {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-      #timer {
-        font-size: 18px;
-      }
-    </style>
+    <link rel="stylesheet" href="keyboard_interaction.css" />
   </head>
   <body>
-    <h1>CPR Speed Test</h1>
-    <p id="instructions">2분 동안 'H'를 빠르게 100~120번 입력하세요.</p>
-    <p>테스트 편의를 위해 10초 동안만 측정하도록 설정함.</p>
-    <p id="speed-test">0 타 (0 타/분)</p>
-    <p id="timer">00:00</p>
-    <button id="start-button">시작</button>
+    <div class="nav">
+      <div class="logo">
+        <img src="CPR_image.png" alt="" />
+      </div>
+      <div class="nav_but">
+        <div class="container">
+          <div class="steps">
+            <span class="circle active">1</span>
+            <span class="circle active">2</span>
+            <span class="circle active">3</span>
+            <span class="circle active">4</span>
+            <span class="circle">5</span>
+            <div class="progress-bar">
+              <span class="indicator"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="speed-test-div">
+      <h1>CPR Speed Test</h1>
+      <p id="instructions">2분 동안 'H'를 빠르게 100~120번 입력하세요.</p>
+      <p>테스트 편의를 위해 10초 동안만 측정하도록 설정함.</p>
+      <p id="speed-test">0 타 (0 타/분)</p>
+      <p id="timer">00:00</p>
+      <button id="start-button">시작</button>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="left">
+          <h1>SKKU x Hell of Sloth</h1>
+          <p>https://github.com/hell-of-sloth</p>
+          <div class="sns">
+            <i class="fab fa-github"></i>
+          </div>
+        </div>
+        <div class="right">
+          <div class="list">
+            <h2>CONTECT</h2>
+            <ul>
+              <li>김상협: sanghyup2000@g.skku.edu</li>
+              <li>박병준: superjun@g.skku.edu</li>
+              <li>송준영: jnnkk@g.skku.edu</li>
+              <li>이균서: rbstj0311@g.skku.edu</li>
+            </ul>
+          </div>
+          <div class="list">
+            <h2>ABOUT</h2>
+            <ul>
+              <li>TEAM : HEll OF SLOTH</li>
+              <li>PROJECT : CPR ONLINE LECTURE</li>
+              <li>UNIVERSITY : SKKU</li>
+              <li>THANK YOU</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="voice_interaction.js"></script>
   </body>
 </html>

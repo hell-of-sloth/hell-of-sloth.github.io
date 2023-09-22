@@ -15,8 +15,8 @@
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
     function onYouTubeIframeAPIReady(fileName) {
       var player = new YT.Player("player", {
-        height: "100%",
-        width: "100%",
+        height: "300",
+        width: "500",
         videoId: "mq6l2tea6mY",
         rel: 0, //0으로 해놓아야 재생 후 관련 영상이 안뜸
         events: {
@@ -27,7 +27,7 @@
     function onPlayerStateChange(event) {
       if (event.data === 0) {
         alert("동영상이 종료되었습니다.");
-        location.href = "index.html";
+        location.href = "voice_interaction.html";
       }
     }
   </script>

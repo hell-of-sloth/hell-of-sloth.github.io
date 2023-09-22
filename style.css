@@ -1,0 +1,131 @@
+body {
+    background-color: #fbeec6;
+}
+.nav {
+    background-color: #fbeec6;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+}
+.nav .logo img{
+    width: 100px;
+    border: 5px solid black;
+    border-radius: 15%;
+    background-color: white;
+    padding: 0px;
+}
+
+.header {
+    background: url(./background_image.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header .title {
+    text-align: center;
+}
+.header .title h1 {
+    font-size: 40px;
+    color: #373333;
+    letter-spacing: 0.2em;
+    margin-bottom: 0;
+}
+.header .title p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #444;
+}
+.header .title button{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font: size 20px;
+    transition: .5s ease;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+.intro .card {
+    flex: 1;
+    text-align: center;
+    margin: 150px 40px;
+}
+.intro .card i {
+    font-size: 70px;
+    color: #444;
+    margin-bottom: 30px;
+}
+.intro .card h1 {
+    letter-spacing: 0.2em;
+}
+.intro .card p {
+    font-size: 10px;
+}
+
+footer {
+    color: white;
+    background: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+footer .container {
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+footer .container .left {
+    flex: 1;
+}
+footer .container .left h1 {
+    margin-bottom: 0;
+    font-size: 25px;
+}
+footer .container .left p {
+    margin: 0;
+    font-size: 10px;
+}
+footer .container .right {
+    flex: 3;
+    padding-left: 50px;
+}
+footer .container .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container .right .list {
+    flex: 1;
+    margin-left: 20px;
+}
+footer .container .right .list h2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+footer .container .right .list ul {
+    list-style: none;
+    padding: 0;
+}
+footer .container .right .list ul li {
+    padding: 5px 5px;
+}
+footer .container .right .list ul li:hover {
+    background-color: #222;
+}

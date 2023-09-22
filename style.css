@@ -46,7 +46,7 @@ body {
 }
 .header .title h1 {
     font-family: 'yg-jalnan';
-    font-size: 40px;
+    font-size: 50px;
     color: #373333;
     letter-spacing: 0.2em;
     margin-bottom: 30px;
@@ -63,7 +63,7 @@ body {
     border: 2px solid black;
     border-radius: 30px;
     padding: 20px 60px;
-    font-size: 20px;
+    font-size: 25px;
     transition: .5s ease;
 }
 

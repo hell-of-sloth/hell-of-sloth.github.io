@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "yg-jalnan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "yg-jalnan", "sans-serif";
+}
+
+body {
+  background-color: #fbeec6;
+}
+
+#final {
+  /* align center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  background-color: #fbeec6;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+}
+.nav .logo img {
+  width: 100px;
+  border: 5px solid black;
+  border-radius: 15%;
+  background-color: white;
+  padding: 0px;
+}
+.nav .nav_but {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 100px;
+}
+.nav .nav_but .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 400px;
+  width: 100%;
+}
+.nav .nav_but .container .steps {
+  display: flex;
+  width: 150%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.steps .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  color: #999;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #e0e0e0;
+  transition: all 200ms ease;
+  transition-delay: 0s;
+  z-index: 1;
+}
+.steps .circle.active {
+  transition-delay: 100ms;
+  border-color: #4070f4;
+  color: #4070f4;
+  z-index: 2;
+}
+.steps .progress-bar {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #ffffff;
+  z-index: 0;
+}
+.progress-bar .indicator {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background: #4070f4;
+  transition: all 300ms ease;
+  z-index: 1;
+}
+
+.header {
+  background: url(./background_image.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .title {
+  text-align: center;
+}
+.header .title h1 {
+  font-family: "yg-jalnan";
+  font-size: 50px;
+  color: #373333;
+  letter-spacing: 0.2em;
+  margin-bottom: 30px;
+}
+.header .title p {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #444;
+}
+.header .title button {
+  font-family: "yg-jalnan";
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 30px;
+  padding: 20px 60px;
+  font-size: 25px;
+  transition: 0.5s ease;
+}
+.header .title button:hover {
+  background-color: rgb(233, 237, 194);
+  font-size: 30px;
+}
+footer {
+  color: white;
+  background: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+footer .container {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+footer .container .left {
+  flex: 1;
+}
+footer .container .left h1 {
+  margin-bottom: 0;
+  font-size: 25px;
+}
+footer .container .left p {
+  margin: 0;
+  font-size: 10px;
+}
+footer .container .right {
+  flex: 3;
+  padding-left: 50px;
+}
+footer .container .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .container .right .list {
+  flex: 1;
+  margin-left: 20px;
+}
+footer .container .right .list h2 {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+footer .container .right .list ul {
+  list-style: none;
+  padding: 0;
+}
+footer .container .right .list ul li {
+  padding: 5px 5px;
+}
+footer .container .right .list ul li:hover {
+  background-color: #222;
+}

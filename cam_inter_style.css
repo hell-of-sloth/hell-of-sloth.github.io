@@ -93,7 +93,7 @@ body {
     background: url(./background_image.jpg);
     background-position: center;
     background-size: cover;
-    height: 700px;
+    height: 900px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,7 +106,7 @@ body {
     font-size: 50px;
     color: #373333;
     letter-spacing: 0.2em;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 button{
@@ -128,8 +128,8 @@ button:hover{
 
 
 #canvas {
-    width: 25%;
-    height: 25%;
+    width: 45%;
+    height: 45%;
     border: black 5px solid;
     border-radius: 20%;
     margin-bottom: 20px ;

@@ -84,6 +84,9 @@
               timerDisplay.textContent
           );
         } else {
+          clearInterval(timer);
+          document.removeEventListener("keydown", countKey);
+          startButton.disabled = false;
           alert("잘하셨습니다.");
           location.href = "camera_interaction.html";
         }

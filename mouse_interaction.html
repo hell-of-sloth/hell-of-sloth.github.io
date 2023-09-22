@@ -25,6 +25,8 @@
           ev.preventDefault();
           var data = ev.dataTransfer.getData("text");
           ev.target.appendChild(document.getElementById(data));
+          alert('You have successfully completed the task!')
+          location.href = "keyboard_interaction.html";
         }
         </script>
 </head>

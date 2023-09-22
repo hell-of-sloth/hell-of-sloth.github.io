@@ -126,6 +126,7 @@ button{
     font-size: 25px;
     transition: .5s ease;
     margin-bottom: 20px ;
+    cursor: pointer;
 }
 button:hover{
     background-color: rgb(233, 237, 194);

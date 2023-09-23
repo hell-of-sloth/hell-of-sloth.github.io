@@ -37,7 +37,12 @@
       <div class="title">
         <h1>직접 실습해 봅시다</h1>
         <h1>CPR 자세를 취해주세요!</h1>
-        <button type="button" style="cursor: pointer" onclick="init()">
+        <button
+          type="button"
+          id="webcam-start-btn"
+          style="cursor: pointer"
+          onclick="init()"
+        >
           웹캠 켜기
         </button>
         <div><canvas id="canvas"></canvas></div>
@@ -108,7 +113,9 @@
             // body에 button을 append하고, button을 클릭하면 final.html로 이동
             const body = document.querySelector("body");
             const button = document.createElement("button");
-            button.innerHTML = "완료 단계로 이동";
+            const webcamStartBtn = document.querySelector("#webcam-start-btn");
+            webcamStartBtn.style.display = "none";
+            button.innerHTML = "🎉축하합니다!🎉<br />완료 단계로 이동";
             button.addEventListener("click", () => {
               window.location.href = "final.html";
             });

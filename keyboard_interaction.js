@@ -5,6 +5,7 @@
   let timer;
   let typingSpeed;
 
+  const okBtn = document.getElementById("ok-btn");
   const startButton = document.getElementById("start-button");
   const speedTest = document.getElementById("speed-test");
   const timerDisplay = document.getElementById("timer");
@@ -58,10 +59,13 @@
       clearInterval(timer);
       document.removeEventListener("keydown", countKey);
       startButton.disabled = false;
-      alert("잘하셨습니다.");
-      location.href = "camera_interaction.html";
+      document.getElementById("modal-dialog").showModal();
+      // location.href = "camera_interaction.html";
     }
   }
 
   startButton.addEventListener("click", startTest);
+  okBtn.addEventListener("click", () => {
+    location.href = "camera_interaction.html";
+  });
 })();

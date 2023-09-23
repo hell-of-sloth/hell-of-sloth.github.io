@@ -12,9 +12,7 @@
       <div class="logo">
         <a href="index.html"><img src="CPR_image.png" alt="" /></a>
       </div>
-      <div class="nav_title">
-        CPR PRAC.
-      </div>
+      <div class="nav_title">CPR PRAC.</div>
       <div class="nav_but">
         <div class="container">
           <div class="steps">
@@ -72,6 +70,19 @@
         </div>
       </div>
     </footer>
-    <script src="keyboard_interaction.js"></script>
+    <dialog id="modal-dialog">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p>정확한 속도로 흉부압박을 잘 했습니다. 다음 단계로 넘어갑니다.</p>
+        <button id="ok-btn">확인</button>
+      </div>
+    </dialog>
   </body>
+  <script src="keyboard_interaction.js"></script>
 </html>

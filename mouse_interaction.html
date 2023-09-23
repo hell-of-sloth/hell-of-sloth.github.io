@@ -10,28 +10,6 @@
     ></script>
     <link rel="icon" href="favicon.png" />
     <link rel="stylesheet" href="./mouse_inter_style.css" />
-    <script>
-      function sleep(ms) {
-        return new Promise((resolve) => setTimeout(resolve, ms));
-      }
-      function allowDrop(ev) {
-        ev.preventDefault();
-      }
-
-      function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-      }
-
-      function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-        sleep(400).then(() => {
-          alert("잘하셨습니다.");
-          location.href = "keyboard_interaction.html";
-        });
-      }
-    </script>
   </head>
   <body>
     <div class="nav">
@@ -109,5 +87,44 @@
         </div>
       </div>
     </footer>
+    <dialog id="modal-dialog">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <p>정확한 위치를 잘 짚었습니다. 다음 단계로 넘어갑니다.</p>
+        <button id="ok-btn">확인</button>
+      </div>
+    </dialog>
   </body>
+  <script>
+    const okBtn = document.getElementById("ok-btn");
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+      sleep(400).then(() => {
+        document.getElementById("modal-dialog").showModal();
+      });
+    }
+
+    okBtn.addEventListener("click", function () {
+      location.href = "keyboard_interaction.html";
+    });
+  </script>
 </html>
